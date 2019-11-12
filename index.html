@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Generala</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.css">
+
+  </head>  
+  <body onload="tabla()">
+    
+    <div class="container" id="page1"><br>
+      
+        <h3>Bienvenido</h3><br>
+        <div>
+            <p>Seleccione la cantidad de jugadores
+                <input type="number" min="2" max="5" value="2" id="cantJugadores" onclick="jugadores();" autofocus>
+              </p><br>
+        </div>
+        <form action="" id="formulario">
+          <div> <label for="usuario1">Ingrese nombre</label><br>
+            <input type="text" id="input1" placeholder="Jugador 1" onkeyup="change();" >
+            
+          </div>
+           <div> <label for="usuario2">  Ingrese nombre</label><br>
+            <input type="text" id="input2" placeholder="Jugador 2" ><br>
+            
+          </div>
+          
+            <div id="usuario3">
+                <label for="usuario3" >  Ingrese nombre</label><br>
+                <input type="text" id="input3" placeholder="Jugador 3">
+                
+              </div>
+       
+            <div id="usuario4">
+                <label for="usuario4">  Ingrese nombre</label><br>
+                <input type="text" id="input4" placeholder="Jugador 4"  >
+                 
+              </div>
+            
+            <div id="usuario5">
+                <label for="usuario5">  Ingrese nombre</label><br>
+                <input type="text" id="input5" placeholder="Jugador 5"  >
+                <br>
+              </div>
+        </form><br>
+        <div id="image"></div>
+        <button onclick="cambiarPag(1);" class="button">Confirmar</button>
+        <br></div>
+        
+    
+    <div class="container1" id="page2" >
+      <header>
+        <div class="item-header texto"><p>Anotador</p></div>
+      </header>     
+      <datalist id="puntaje1a6">
+          <option value="Uno">
+          <option value="Dos">
+          <option value="Tres">
+          <option value="Cuatro">
+          <option value="Cinco">
+          <option value="Tachar">
+      </datalist>
+
+      <datalist id="puntajeEFPG">
+        <option value="Servido">
+        <option value="No servido">
+        <option value="Tachar">
+      </datalist>
+
+      <section>
+        <div class="table-column" id="tabla">
+          <div class="th"><h1>Tablas</h1></div>
+              <div class="celdas"><p>Uno</p></div>
+              <div class="celdas"><p>Dos</p></div>
+              <div class="celdas"><p>Tres</p></div>
+              <div class="celdas"><p>Cuatro</p></div>
+              <div class="celdas"><p>Cinco</p></div>
+              <div class="celdas"><p>Seis</p></div>
+              <div class="celdas"><p>Escalera</p></div>
+              <div class="celdas"><p>Full</p></div>
+              <div class="celdas"><p>Poker</p></div>
+              <div class="celdas"><p>Generala</p></div>
+              <div class="celdas"><p>Total</p></div>
+        </div>
+
+        <div class="table-column">
+          <div class="th"><h2 id="jugador1">Jugador 1</h2></div>
+            <div class="celdas"><input list="puntaje1a6" name="unoSeis" ></div>
+            <div class="celdas"><input list="puntaje1a6" name="unoSeis" ></div>
+            <div class="celdas"><input list="puntaje1a6" name="unoSeis" ></div>
+            <div class="celdas"><input list="puntaje1a6" name="unoSeis"></div>
+            <div class="celdas"><input list="puntaje1a6" name="unoSeis" ></div>
+            <div class="celdas"><input list="puntaje1a6" name="unoSeis" ></div>
+            <div class="celdas"><input list="puntajeEFPG" name="efpg" ></div>
+            <div class="celdas"><input list="puntajeEFPG" name="efpg" ></div>
+            <div class="celdas"><input list="puntajeEFPG" name="efpg" ></div>
+            <div class="celdas"><input list="puntajeEFPG" name="efpg" ></div>
+            <div class="celdas"><input value=" " name="visor" id="j1"  disabled="disabled"></div>
+          </div>
+
+        <div class="table-column">
+          <div class="th"><h2 id="jugador2">Jugador 2</h2></div>
+            <div class="celdas"><input list="puntaje1a6" name="unoSeis"></div>
+            <div class="celdas"><input list="puntaje1a6" name="unoSeis" ></div>
+            <div class="celdas"><input list="puntaje1a6" name="unoSeis"></div>
+            <div class="celdas"><input list="puntaje1a6" name="unoSeis"></div>
+            <div class="celdas"><input list="puntaje1a6" name="unoSeis"></div>
+            <div class="celdas"><input list="puntaje1a6" name="unoSeis"></div>
+            <div class="celdas"><input list="puntajeEFPG" name="efpg"></div>
+            <div class="celdas"><input list="puntajeEFPG" name="efpg"></div>
+            <div class="celdas"><input list="puntajeEFPG" name="efpg"></div>
+            <div class="celdas"><input list="puntajeEFPG" name="efpg"></div>
+            <div class="celdas"><input value="" name="visor" id="j2" disabled="disabled"></div>
+        </div>
+          
+        <div class="table-column" id="ocultarJ3">
+          <div class="th"><h2 id="jugador3">Jugador 3</h2></div>
+            <div class="celdas"><input list="puntaje1a6" name="unoSeis"></div>
+            <div class="celdas"><input list="puntaje1a6" name="unoSeis"></div>
+            <div class="celdas"><input list="puntaje1a6" name="unoSeis"></div>
+            <div class="celdas"><input list="puntaje1a6" name="unoSeis"></div>
+            <div class="celdas"><input list="puntaje1a6" name="unoSeis"></div>
+            <div class="celdas"><input list="puntaje1a6" name="unoSeis"></div>
+            <div class="celdas"><input list="puntajeEFPG" name="efpg"></div>
+            <div class="celdas"><input list="puntajeEFPG" name="efpg"></div>
+            <div class="celdas"><input list="puntajeEFPG" name="efpg"></div>
+            <div class="celdas"><input list="puntajeEFPG" name="efpg"></div>
+            <div class="celdas"><input value="" name="visor" id="j3" disabled="disabled"></div>
+        </div>
+
+        <div class="table-column" id="ocultarJ4">
+          <div class="th"><h2 id="jugador4">Jugador 4</h2></div>
+            <div class="celdas"><input list="puntaje1a6" name="unoSeis"></div>
+            <div class="celdas"><input list="puntaje1a6" name="unoSeis"></div>
+            <div class="celdas"><input list="puntaje1a6" name="unoSeis"></div>
+            <div class="celdas"><input list="puntaje1a6" name="unoSeis"></div>
+            <div class="celdas"><input list="puntaje1a6" name="unoSeis"></div>
+            <div class="celdas"><input list="puntaje1a6" name="unoSeis"></div>
+            <div class="celdas"><input list="puntajeEFPG" name="efpg"></div>
+            <div class="celdas"><input list="puntajeEFPG" name="efpg"></div>
+            <div class="celdas"><input list="puntajeEFPG" name="efpg"></div>
+            <div class="celdas"><input list="puntajeEFPG" name="efpg"></div>
+            <div class="celdas"><input value="" name="visor" id="j4" disabled="disabled"></div>
+        </div>
+
+      <div class="table-column" id="ocultarJ5">
+        <div class="th"><h2 id="jugador5">Jugador 5</h2></div>
+          <div class="celdas"><input list="puntaje1a6" name="unoSeis"></div>
+          <div class="celdas"><input list="puntaje1a6" name="unoSeis"></div>
+          <div class="celdas"><input list="puntaje1a6" name="unoSeis"></div>
+          <div class="celdas"><input list="puntaje1a6" name="unoSeis"></div>
+          <div class="celdas"><input list="puntaje1a6" name="unoSeis"></div>
+          <div class="celdas"><input list="puntaje1a6" name="unoSeis"></div>
+          <div class="celdas"><input list="puntajeEFPG" name="efpg"></div>
+          <div class="celdas"><input list="puntajeEFPG" name="efpg"></div>
+          <div class="celdas"><input list="puntajeEFPG" name="efpg"></div>
+          <div class="celdas"><input list="puntajeEFPG" name="efpg"></div>
+          <div class="celdas"><input value="" name="visor" id="j5" disabled="disabled"></div>
+      </div>
+    </section>
+    
+      <footer>
+        <div class="item-foo borrar"><input type="submit" value="Borrar Datos" onclick="borrar();"></div>
+        <div class="item-foo terminar" id="terminar"><input type="submit" value="Terminar" onclick="terminar();"></div>
+      </footer>
+    </div>
+    
+<script src="js/script.js"></script>
+  </body>
+</html>
